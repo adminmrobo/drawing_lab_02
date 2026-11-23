@@ -1,0 +1,109 @@
+{
+  "series_ko": "연구실 특별편 · 그리기와 렌더링",
+  "title_ko": "그리기 연구실 02 · 머리카락 편",
+  "site_url": "https://adminmrobo.github.io/drawing_lab_02/",
+  "site_title": "그리기 연구실 02 · 머리카락 편 — 같은 얼굴, 다른 머리",
+  "ontology": {
+    "pages": [
+      {
+        "path": "index.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "01_hair_frame.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "02_hair_bundles.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "03_hair_color.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "04_hair_motion.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "05_ai_vfx.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "06_failure_lab.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "practice/index.html",
+        "kg": true,
+        "export": true
+      }
+    ]
+  },
+  "covers": [
+    {
+      "page": "index.html",
+      "key": "cover_index",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "01_hair_frame.html",
+      "key": "cover_01",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "02_hair_bundles.html",
+      "key": "cover_02",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "03_hair_color.html",
+      "key": "cover_03",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "04_hair_motion.html",
+      "key": "cover_04",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "05_ai_vfx.html",
+      "key": "cover_05",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "06_failure_lab.html",
+      "key": "cover_06",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    },
+    {
+      "page": "practice/index.html",
+      "key": "cover_07",
+      "style": "16-bit RPG pixel art",
+      "status": "요청문 준비 완료 · 그림 준비 중"
+    }
+  ],
+  "images": {
+    "requests": "docs/image_requests (37장)",
+    "make_requests": "docs/image_requests_make (11장)",
+    "received": 0,
+    "missing": "전부(그림 준비 중 자리로 표시)",
+    "note": "그림이 오면 assets/img/{이름}.webp로 넣고 build.py·make_og.py 재실행"
+  },
+  "version": "v1.0",
+  "date": "2026-11-24"
+}

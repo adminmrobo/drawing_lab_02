@@ -1,0 +1,12 @@
+order,conversation,file,what,ratio,status
+1,M01,p1_haru_wig_off_b,1부 실습 · 가발을 벗기고 안내선 긋기,16:9,
+2,M01,p1_haru_volume_compare_b,1부 실습 · 헬멧 단발과 부피 있는 단발,16:9,
+3,M02,p2_sia_bundles_b,2부 실습 · 덩어리 → 속 선 → 가는 털,16:9,
+4,M02,p2_sia_ponytail_b,2부 실습 · 묶은 점으로 모이는 포니테일,2:3,
+5,M03,p3_moa_wig_colors_b,3부 실습 · 가발 네 색을 흑백으로,16:9,
+6,M03,p3_moa_shine_band_b,3부 실습 · 흐름을 가로지르는 윤기 띠,2:3,
+7,M04,p4_haru_wind_b,"4부 실습 · 바람 하나, 앞머리까지",16:9,
+8,M04,p4_haru_emotion_hair_b,4부 실습 · 감정 네 가지와 머리카락,16:9,
+9,M05,p5_haru_wig_inpaint_b,5부 실습 · 부분 수정으로 가발만 바꾸기,16:9,
+10,M06,f2_fixed,6부 실습 · 헬멧 가발 고치기,2:3,
+11,M06,f8_fixed,6부 실습 · 얼굴이 바뀐 가발 고치기,16:9,
