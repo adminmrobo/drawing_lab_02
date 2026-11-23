@@ -1,0 +1,172 @@
+{
+ "version": "1.0",
+ "made": "2026-11-24",
+ "via": "rehang-2026-11-24",
+ "domains": [
+  "art",
+  "genai"
+ ],
+ "note": "분야 뼈대 주제에 다시 걸기(ai-lab-retrofit 15장). links는 자동 후보이며 틀린 줄은 지우면 된다. 빌드 스크립트가 있는 저장소는 빌드 끝에 rehang.apply_overlay()가 이 파일을 적용한다.",
+ "topics": {
+  "lab:topic/facial-expression": {
+   "ko": "표정",
+   "en": "Facial expression",
+   "domain": [
+    "art"
+   ],
+   "level": 2
+  },
+  "lab:topic/gesture": {
+   "ko": "자세와 움직임선",
+   "en": "Gesture and line of action",
+   "domain": [
+    "art"
+   ],
+   "level": 1
+  },
+  "lab:topic/hair-structure": {
+   "ko": "머리카락 덩어리",
+   "en": "Hair masses",
+   "domain": [
+    "art"
+   ],
+   "level": 2
+  },
+  "lab:topic/image-editing-inpainting": {
+   "ko": "이미지 편집·인페인팅",
+   "en": "Image editing and inpainting",
+   "domain": [
+    "genai"
+   ],
+   "level": 3
+  },
+  "lab:topic/light-shadow": {
+   "ko": "빛과 그림자",
+   "en": "Light and shadow",
+   "domain": [
+    "art"
+   ],
+   "level": 2
+  },
+  "lab:topic/prompt-for-images": {
+   "ko": "이미지 프롬프트 작성",
+   "en": "Prompting for images",
+   "domain": [
+    "genai"
+   ],
+   "level": 2
+  },
+  "lab:topic/style-transfer-drawing": {
+   "ko": "스타일 바꾸기",
+   "en": "Changing styles",
+   "domain": [
+    "art"
+   ],
+   "level": 2
+  }
+ },
+ "links": {
+  "lab:concept/curl-cylinder": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "말린 머리의 원기둥"
+  },
+  "lab:concept/follow-through": {
+   "topic": "lab:topic/gesture",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "늦게 따라오기"
+  },
+  "lab:concept/hair-contact": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "몸에 닿는 곳의 흐름"
+  },
+  "lab:concept/hair-gray-value": {
+   "topic": "lab:topic/light-shadow",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "머리색의 회색 농도"
+  },
+  "lab:concept/hair-volume": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "머리카락 부피"
+  },
+  "lab:concept/hairline-parting": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "이마 선과 가르마"
+  },
+  "lab:concept/length-ends": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "길이와 끝 방향"
+  },
+  "lab:concept/shine-band": {
+   "topic": "lab:topic/light-shadow",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "윤기 띠"
+  },
+  "lab:concept/tie-convergence": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "묶은 점으로 모이는 흐름"
+  },
+  "lab:concept/wind-force": {
+   "topic": "lab:topic/gesture",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "바람과 머리카락"
+  },
+  "lab:method/emotion-hair": {
+   "topic": "lab:topic/facial-expression",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "감정 과장 머리카락"
+  },
+  "lab:method/hair-draw-order": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "머리카락 그리는 순서"
+  },
+  "lab:method/hair-inpaint": {
+   "topic": "lab:topic/image-editing-inpainting",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "가림 영역으로 머리만 바꾸기"
+  },
+  "lab:method/hair-locks": {
+   "topic": "lab:topic/hair-structure",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "다발로 그리기"
+  },
+  "lab:method/hair-prompt": {
+   "topic": "lab:topic/prompt-for-images",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "머리 문장 여덟 조각"
+  },
+  "lab:method/style-locks": {
+   "topic": "lab:topic/style-transfer-drawing",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "화풍별 다발 수"
+  }
+ },
+ "retag": {
+  "from": [],
+  "to": [
+   "art"
+  ]
+ }
+}
