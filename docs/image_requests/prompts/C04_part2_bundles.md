@@ -28,7 +28,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 2) p2_sia_shoulder_contact — 2부 2단계
-alt: 시아가 고개와 어깨를 살짝 돌려 긴 흑발 일부가 한쪽 어깨 앞으로 넘어와 어깨 위에서 꺾이고, 나머지는 어깨 뒤로 넘어간 상반신 그림
+alt: 시아가 고개와 어깨를 살짝 돌리고, 긴 흑발 일부가 한쪽 어깨 앞으로 넘어와 가슴 위로 흐르는 상반신 그림. 어깨 위에서 꺾이는 모습은 약하게 나옴
 ```
 Illustration, vertical 2:3.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
@@ -56,7 +56,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 4) p2_sia_curl_braid — 2부 4단계
-alt: 시아가 굵게 말린 머리 가발과 세 갈래로 땋은 머리 가발을 번갈아 쓴 두 모습, 옆에 원기둥과 마름모 안내선이 연하게 겹친 비교 그림
+alt: 시아가 굵게 말린 금발 가발과 세 갈래로 땋은 갈색 가발을 번갈아 쓴 두 모습. 요청한 원기둥·마름모 안내선은 그려지지 않음
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.

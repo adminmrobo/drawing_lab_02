@@ -52,57 +52,57 @@
       "page": "index.html",
       "key": "cover_index",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "01_hair_frame.html",
       "key": "cover_01",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "02_hair_bundles.html",
       "key": "cover_02",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "03_hair_color.html",
       "key": "cover_03",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "04_hair_motion.html",
       "key": "cover_04",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "05_ai_vfx.html",
       "key": "cover_05",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "06_failure_lab.html",
       "key": "cover_06",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     },
     {
       "page": "practice/index.html",
       "key": "cover_07",
       "style": "16-bit RPG pixel art",
-      "status": "요청문 준비 완료 · 그림 준비 중"
+      "status": "반영 완료(2026-11-24)"
     }
   ],
   "images": {
     "requests": "docs/image_requests (37장)",
     "make_requests": "docs/image_requests_make (11장)",
-    "received": 0,
-    "missing": "전부(그림 준비 중 자리로 표시)",
-    "note": "그림이 오면 assets/img/{이름}.webp로 넣고 build.py·make_og.py 재실행"
+    "received": 48,
+    "missing": [],
+    "note": "원본 해상도 유지(1920×1080·1024×1536), 표지 무손실 WebP"
   },
   "version": "v1.0",
   "date": "2026-11-24"

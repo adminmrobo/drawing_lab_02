@@ -14,7 +14,7 @@
 
 ---
 ## 1) p1_haru_wig_off — 1부 1단계
-alt: 하루가 짧은 단발 가발을 한 손에 들고, 다른 쪽에는 같은 하루의 머리 원형 위에 가운데 선·이마 선·가르마 시작점이 안내선으로 그려진 비교 그림
+alt: 하루가 벗은 짧은 단발 가발을 한 손에 들고 있고, 오른쪽에는 같은 하루의 머리 위에 파란 가운데 선과 이마 선, 주황 가르마 시작점이 그려진 비교 그림(머리 원형만 따로 그리지는 않고 하루의 원래 머리 위에 안내선을 얹음)
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
@@ -44,7 +44,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 3) p1_haru_length_ends — 1부 3단계
-alt: 하루가 짧은·중간·긴 가발을 차례로 써 보고, 중간 길이 가발의 끝을 바깥으로 튀게·안으로 말리게 바꾼 모습을 나란히 보여 주는 그림
+alt: 하루가 다섯 가지 길이(아주 짧음·턱 길이·어깨 길이 바깥 튐·어깨 길이 안쪽 말림·긴 머리)로 바꾼 모습을 나란히 보여 주는 그림. 가발 색 대신 하루의 분홍 머리와 정수리 번이 그대로 남아 나옴
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.

@@ -14,7 +14,7 @@
 
 ---
 ## 1) p3_moa_wig_colors — 3부 1단계
-alt: 모아가 금발·붉은 머리·은발·흑발 가발을 쓴 네 모습, 윗줄은 컬러, 아랫줄은 같은 그림을 흑백 만화 톤으로 바꾼 비교 그림
+alt: 모아가 밝은 금발(베이지에 가까움)·붉은 머리·은발·흑발 가발을 쓴 네 모습, 윗줄은 컬러, 아랫줄은 같은 그림을 흑백 만화 톤으로 바꾼 비교 그림
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
@@ -29,7 +29,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 2) p3_moa_shine_band — 3부 2단계
-alt: 모아가 긴 흑발 가발을 쓰고 위에서 빛을 받아, 머리 둘레를 감는 흰 윤기 띠가 다발마다 끊어지며 이어지는 상반신 그림
+alt: 모아가 긴 흑발 가발을 쓰고 위에서 빛을 받는 상반신 그림. 머리 둘레를 감는 윤기 띠는 약하게 퍼져 나와 또렷하지 않음
 ```
 Illustration, vertical 2:3.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
