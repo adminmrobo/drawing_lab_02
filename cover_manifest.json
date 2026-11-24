@@ -103,7 +103,7 @@
     "received": 48,
     "missing": [],
     "note": "원본 해상도 유지(1920×1080·1024×1536), 표지 무손실 WebP",
-    "ex_requests": "docs/image_requests_ex (12장 중 11장 반영, ex5_1_sia_silver_inpaint 미수령)"
+    "ex_requests": "docs/image_requests_ex 12장 모두 반영 · 다시 시도 6장 반영(성공 4, 부분 성공 1, 실패 1) · 2차 다시 시도 2장 요청(docs/image_requests_ex_retry2)"
   },
   "version": "v1.0",
   "date": "2026-11-24"

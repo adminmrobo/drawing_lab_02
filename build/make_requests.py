@@ -244,9 +244,18 @@ XR = [
    "Change only the bangs and the side locks in front of the ears: the strong wind from the LEFT blows them sideways to the RIGHT, lifting the bangs off the forehead so part of her forehead shows, and the side locks stream to the right past her cheek.\nThe long back hair and the lab coat keep blowing to the right as before, so the whole picture has one wind direction."),
 ]
 CONV_RETRY = [("R01_ex_retry", "연습 문제 다시 시도 6장", "16:9·2:3", "각 프롬프트의 1차 결과 그림(failed/) + refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", XR)]
-PROMPTS = {it[0]: it for _c in CONV + CONV_EX + CONV_RETRY for it in _c[4]}
-CONV_OF = {it[0]: _c[0] for _c in CONV + CONV_EX + CONV_RETRY for it in _c[4]}
-ATTACH_OF = {_c[0]: _c[3] for _c in CONV + CONV_EX + CONV_RETRY}
+XR2 = [
+ body("ex2_1_sia_half_up_retry2", "02_hair_bundles.html", "2부 연습 1 2차 다시 시도", "바로 뒤에서 본 시아의 반묶음 가발 — 이마·관자놀이에서 온 당김 선이 뒤통수 묶은 점 하나로 모이고, 그 아래 짧은 꼬리가 퍼지는 결과", "2:3",
+   "View from DIRECTLY BEHIND, upper body, her head turned slightly so a little of her profile shows. " + wig("sia", "a long straight dark chestnut half-up wig") + ".\nThe back of the head fills the upper middle of the picture. Six to eight clear tension lines run from both temples and the top of the head and converge at ONE small dark hair tie in the center of the back of the head.\nBelow the tie, a short tail about a hand's length spreads out like a small fan over the loose hair.\nThe lower half of the hair falls loosely down her back as soft ribbon-like locks.",
+   "Light from the upper left."),
+ body("ex6_1_wind_fixed_retry2", "06_failure_lab.html", "6부 연습 1 2차 다시 시도", "가까이서 본 하루 — 왼쪽에서 부는 센 바람에 앞머리가 오른쪽으로 쓸려 이마 왼쪽이 드러나고, 얼굴 옆 머리와 긴 뒷머리·랩코트 깃이 모두 오른쪽으로 날리는 결과", "16:9",
+   "Close-up, head and shoulders, three-quarter view of " + wig("haru", W_LONG) + ".\nA STRONG side wind blows from the LEFT edge of the picture to the RIGHT. The bangs are swept completely to the right side of her face: the left part of her forehead is clearly visible and no bangs hang over her left eyebrow.\nThe side locks in front of both ears stream to the right past her cheek, and the long back hair flies far to the right; the collar of her lab coat also flips to the right.\nEvery strand in the picture points to the right — one wind direction only.",
+   "Light from the upper left."),
+]
+CONV_RETRY2 = [("R02_ex_retry2", "연습 문제 2차 다시 시도 2장", "2:3·16:9", "refs/sia_anime_base.png, refs/haru_anime_base.png (새 대화에서 처음부터)", XR2)]
+PROMPTS = {it[0]: it for _c in CONV + CONV_EX + CONV_RETRY + CONV_RETRY2 for it in _c[4]}
+CONV_OF = {it[0]: _c[0] for _c in CONV + CONV_EX + CONV_RETRY + CONV_RETRY2 for it in _c[4]}
+ATTACH_OF = {_c[0]: _c[3] for _c in CONV + CONV_EX + CONV_RETRY + CONV_RETRY2}
 if __name__ == "__main__":
     os.makedirs(os.path.join(D, "prompts"), exist_ok=True)
     rows = []; n = 0

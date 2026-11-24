@@ -35,7 +35,7 @@
 ## 그림
 - 그림 37장(표지 8 + 본문 21 + 실패 8)은 Genspark로 만들어 반영했습니다(2026-11-24). 요청문: `docs/image_requests/` (저장 이름은 `checklist.csv`).
 - 비교 그림(B 결과) 11장도 반영했습니다. 요청문: `docs/image_requests_make/`
-- 연습 문제 예상 결과 그림 12장 요청문: `docs/image_requests_ex/` (`python3 build/make_requests_ex.py`) — 11장 반영, 5부 연습 1(ex5_1)은 아직 '그림 준비 중'입니다.
+- 연습 문제 예상 결과 그림 12장 요청문: `docs/image_requests_ex/` (`python3 build/make_requests_ex.py`) — 12장 모두 반영. 의도와 다르게 나온 6장은 1차 결과를 남기고 다시 시도 결과를 더했습니다(`docs/image_requests_ex_retry/`, 2차: `docs/image_requests_ex_retry2/`).
 - 그림이 오면 `assets/img/{이름}.webp`로 넣고 `python3 build/build.py`, 표지는 `python3 build/make_og.py`까지 다시 돌립니다.
 - 표지는 16비트 RPG풍 픽셀아트, 본문은 애니풍(3부 4단계는 흑백 만화풍, 5부 4단계만 네 화풍). 실사풍은 캐릭터를 코스프레한 가상의 성인 모델입니다.
 
