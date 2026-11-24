@@ -61,7 +61,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 4) ex2_2_haru_braid_shoulder — 2부 연습 2 · 하루의 땋은 머리를 어깨 앞으로 — 닿는 곳에서 꺾기 (2:3)
-**설명:** 하루가 한 갈래로 땋은 갈색 가발을 오른쪽 어깨 앞으로 넘긴 상반신 — 땋은 머리가 어깨에 닿는 곳에서 꺾여 가슴 위로 내려오고, 매듭이 아래로 갈수록 작아지는 예상 결과
+**설명:** 하루가 한 갈래로 땋은 밝은 갈색 가발을 어깨 앞으로 넘긴 상반신 — 매듭이 아래로 갈수록 작아짐. 요청한 오른쪽이 아니라 왼쪽 어깨(그림 오른쪽)로 넘어왔고 어깨 위 꺾임은 약하게 나온 결과
 ```
 Illustration, vertical 2:3.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.

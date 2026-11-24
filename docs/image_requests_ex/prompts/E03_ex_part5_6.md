@@ -30,7 +30,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 2) ex5_2_three_low_ponytails — 5부 연습 2 · 같은 머리 문장으로 세 사람 단체 그림 (16:9)
-**설명:** 하루·시아·모아가 같은 '목덜미 낮은 포니테일' 가발 문장으로 나란히 선 단체 그림 — 머리 모양은 같고 얼굴·눈 색·옷·모아의 왼쪽 리본은 각자 그대로인 예상 결과
+**설명:** 하루·시아·모아가 같은 '목덜미 낮은 포니테일' 문장으로 나란히 선 단체 그림 — 세 사람 모두 낮은 포니테일이고 얼굴·눈 색·모아의 왼쪽 리본은 그대로지만, 하루는 가발 색 대신 원래 분홍 머리와 남색 줄로 나온 결과
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
@@ -47,7 +47,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 3) ex6_1_wind_fixed — 6부 연습 1 · 실패 f6 고치기 — 바람을 하나로 (16:9)
-**설명:** 실패 f6을 고친 예상 결과 — 왼쪽에서 부는 바람 하나에 하루의 앞머리·옆머리·뒷머리·랩코트가 모두 오른쪽으로 날리는 그림
+**설명:** 실패 f6을 고친 결과 — 왼쪽에서 부는 바람에 하루의 긴 뒷머리와 랩코트가 오른쪽으로 날림. 앞머리와 얼굴 옆 머리는 거의 그대로 내려온 그림
 ```
 Illustration, wide 16:9.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.

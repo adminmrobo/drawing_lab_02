@@ -368,12 +368,13 @@ def ex_section(P):
         how = "".join(f"<li><b>{E(a)}</b> — {E(b)}</li>" for a, b in x["how"])
         chk = "".join(f'<li>{E(c)}' + (f' <a href="{l}">원리 보기</a>' if l else "") + "</li>" for c, l in x["expect"])
         mis = "".join(f"<tr><td>{E(a)}</td><td><code>{E(b)}</code></td></tr>" for a, b in x["mistakes"])
+        res = f'<p style="background:#fff7ec;border-left:4px solid var(--orange);padding:8px 12px;border-radius:6px">{E(x["res"])}</p>' if x.get("res") else ""
         out += f"""<div class="failcard" id="ex{i}"><h3>연습 {i} · {E(x['title'])} <span class="chip">{E(x['level'])}</span></h3>
 <p><b>배우는 원리</b> — {E(x['goal'])}</p><div class="box"><b>상황</b> — {E(x['situ'])}</div>
 <h4>순서별 설명</h4><ol>{how}</ol>
 <div class="pair"><div class="promptbox"><b>연습 프롬프트(예상 결과 그림을 만든 문장 그대로)</b><p class="hint">첨부: {E(att)}</p><pre>{E(it[4])}</pre><button type="button" class="btn copy">복사하기</button></div>
 <div>{art(x['key'], it[3], ar, "예상 결과 — 위 연습 프롬프트로 만든 예시")}</div></div>
-<h4>결과에서 확인할 것</h4><ol>{chk}</ol>
+<h4>결과에서 확인할 것</h4><ol>{chk}</ol>{res}
 <h4>자주 나오는 실수와 덧붙일 문장</h4><div class="tbl"><table><thead><tr><th>결과에서 보이는 증상</th><th>덧붙이거나 바꿀 문장</th></tr></thead><tbody>{mis}</tbody></table></div>
 <p class="hint"><b>바꿔 해 보기</b> — {E(x['extend'])}</p></div>"""
     return out + "</div></section>"

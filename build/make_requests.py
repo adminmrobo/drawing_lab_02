@@ -183,7 +183,7 @@ X2 = [
  body("ex2_1_sia_half_up", "02_hair_bundles.html", "2부 연습 1", "반묶음 가발을 쓴 시아의 뒤쪽 3/4 모습 — 윗머리 다발이 뒤통수의 묶은 점으로 모이고, 아랫머리는 등 위로 풀려 내려오는 예상 결과", "2:3",
    "Back three-quarter view, upper body of " + wig("sia", "a long straight dark chestnut half-up wig") + ", looking back over her shoulder.\nThe upper half of the hair is pulled back from the hairline and both temples toward one small tie at the back of the head, with visible tension lines converging at the tie; a short tail spreads out below the tie.\nThe lower half of the hair falls loosely down her back as soft ribbon-like locks.",
    "Light from the upper left."),
- body("ex2_2_haru_braid_shoulder", "02_hair_bundles.html", "2부 연습 2", "하루가 한 갈래로 땋은 갈색 가발을 오른쪽 어깨 앞으로 넘긴 상반신 — 땋은 머리가 어깨에 닿는 곳에서 꺾여 가슴 위로 내려오고, 매듭이 아래로 갈수록 작아지는 예상 결과", "2:3",
+ body("ex2_2_haru_braid_shoulder", "02_hair_bundles.html", "2부 연습 2", "하루가 한 갈래로 땋은 밝은 갈색 가발을 어깨 앞으로 넘긴 상반신 — 매듭이 아래로 갈수록 작아짐. 요청한 오른쪽이 아니라 왼쪽 어깨(그림 오른쪽)로 넘어왔고 어깨 위 꺾임은 약하게 나온 결과", "2:3",
    "Upper body, front view of " + wig("haru", "a long light-brown wig in one loose three-strand braid") + ".\nThe braid is brought over the front of her RIGHT shoulder: it rests on the shoulder, bends along it, and falls over her chest. The braid is made of soft diamond-shaped sections that get gradually smaller toward the end, finished with a small plain hair tie.\nThe rest of the hair behind the shoulders is partly hidden by the shoulders.",
    "Light from the upper left."),
 ]
@@ -191,7 +191,7 @@ X3 = [
  body("ex3_1_manga_three_tones", "03_hair_color.html", "3부 연습 1", "흑백 만화 한 장면에 하루(진한 회색 톤)·시아(검게 칠하고 흰 윤기 띠)·모아(선만, 그늘에만 옅은 톤)가 나란히 서서 머리색이 밝기로 구별되는 예상 결과", "16:9",
    "Black-and-white manga illustration with ink lines and screentones only (no color), three adults standing side by side, upper body.\nLeft: " + wig("haru", "a shoulder-length red wig drawn with a dark gray screentone") + ".\nCenter: " + who("sia") + ", her own long black hair filled solid black with white glossy highlight bands about 15 percent of the hair area.\nRight: " + wig("moa", "a long wavy blonde wig left almost white, drawn with outlines and flow lines only and a light screentone only in the shadows") + ".\nThe three hair colors are clearly different in brightness.",
    ""),
- body("ex3_2_moa_backlight_silver", "03_hair_color.html", "3부 연습 2", "은발 가발을 쓴 모아가 뒤쪽 위에서 오는 빛을 받아, 정수리 가까이에 머리 둘레를 감는 윤기 띠와 머리 가장자리의 밝은 테두리가 생긴 예상 결과", "2:3",
+ body("ex3_2_moa_backlight_silver", "03_hair_color.html", "3부 연습 2", "은발 가발을 쓴 모아가 창가에 선 상반신 — 요청한 역광 대신 앞에서 빛을 받아 얼굴이 밝고, 정수리 윤기 띠와 머리 가장자리 테두리는 또렷하지 않게 나온 결과", "2:3",
    "Upper body of " + wig("moa", "a long straight silver wig") + ", standing by a bright window.\nThe light comes from BEHIND and ABOVE her. A single glossy highlight band wraps around the head across the hair flow, placed high near the crown, broken slightly at each lock; a thin bright rim of light outlines the edge of the hair and shoulders; her face is in soft shade.",
    ""),
 ]
@@ -207,12 +207,12 @@ X5 = [
  body("ex5_1_sia_silver_inpaint", "05_ai_vfx.html", "5부 연습 1", "왼쪽은 원래 흑발의 시아, 오른쪽은 머리 부분만 다시 그려 은발이 된 시아 — 얼굴·회색 눈·귀걸이·옷·자세가 그대로인 예상 결과", "16:9",
    "Two panels side by side, identical upper-body pose and lighting.\nLeft: " + who("sia") + ".\nRight: exactly the same image, but only the hair color is changed to silver, as if repainted with inpainting: same hair length, same locks and same parting; her face, gray eyes, small silver earrings, expression, outfit and background are pixel-for-pixel the same.",
    "Light from the upper left in both panels."),
- body("ex5_2_three_low_ponytails", "05_ai_vfx.html", "5부 연습 2", "하루·시아·모아가 같은 '목덜미 낮은 포니테일' 가발 문장으로 나란히 선 단체 그림 — 머리 모양은 같고 얼굴·눈 색·옷·모아의 왼쪽 리본은 각자 그대로인 예상 결과", "16:9",
+ body("ex5_2_three_low_ponytails", "05_ai_vfx.html", "5부 연습 2", "하루·시아·모아가 같은 '목덜미 낮은 포니테일' 문장으로 나란히 선 단체 그림 — 세 사람 모두 낮은 포니테일이고 얼굴·눈 색·모아의 왼쪽 리본은 그대로지만, 하루는 가발 색 대신 원래 분홍 머리와 남색 줄로 나온 결과", "16:9",
    "Group picture, three adults standing side by side, upper body, front view, all wearing the same style of wig: a low ponytail tied at the nape, shoulder-length tail, side-swept bangs, natural volume, soft ribbon-like locks.\nLeft: " + FACE["haru"] + " with a light-brown version of this wig, wearing " + OUT["haru"] + ".\nCenter: " + FACE["sia"] + " with a dark chestnut version, wearing " + OUT["sia"] + ".\nRight: " + FACE["moa"] + " with an ash-beige version, the white frilled maid headband and the white ribbon over her LEFT ear on top of the wig, wearing " + OUT["moa"] + ".\nEach keeps her own face and eye color.",
    "Light from the upper left."),
 ]
 X6 = [
- body("ex6_1_wind_fixed", "06_failure_lab.html", "6부 연습 1", "실패 f6을 고친 예상 결과 — 왼쪽에서 부는 바람 하나에 하루의 앞머리·옆머리·뒷머리·랩코트가 모두 오른쪽으로 날리는 그림", "16:9",
+ body("ex6_1_wind_fixed", "06_failure_lab.html", "6부 연습 1", "실패 f6을 고친 결과 — 왼쪽에서 부는 바람에 하루의 긴 뒷머리와 랩코트가 오른쪽으로 날림. 앞머리와 얼굴 옆 머리는 거의 그대로 내려온 그림", "16:9",
    "Full body of " + wig("haru", W_LONG) + ", standing in a strong wind blowing from the LEFT.\nEvery lock, including the bangs, the side locks in front of the ears and the long back hair, blows to the RIGHT; the roots stay close to the head and the tips move the most. Her lab coat also flutters to the right. There is only one wind direction in the whole picture.",
    "Light from the upper left."),
  body("ex6_2_moa_low_twin_adult", "06_failure_lab.html", "6부 연습 2", "머리 이름 대신 모양을 적어 고친 예상 결과 — 목덜미 낮은 위치에서 두 갈래로 묶은 어깨 길이 가발을 쓴 모아가 20대 성인 비율로 차분하게 보이는 그림", "2:3",

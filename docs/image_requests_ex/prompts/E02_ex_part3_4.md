@@ -31,7 +31,7 @@ No text, no letters, no numbers, no speech bubbles, no logos, no watermark, no r
 
 ---
 ## 2) ex3_2_moa_backlight_silver — 3부 연습 2 · 뒤에서 오는 빛 — 윤기 띠를 정수리 쪽으로 올리기 (2:3)
-**설명:** 은발 가발을 쓴 모아가 뒤쪽 위에서 오는 빛을 받아, 정수리 가까이에 머리 둘레를 감는 윤기 띠와 머리 가장자리의 밝은 테두리가 생긴 예상 결과
+**설명:** 은발 가발을 쓴 모아가 창가에 선 상반신 — 요청한 역광 대신 앞에서 빛을 받아 얼굴이 밝고, 정수리 윤기 띠와 머리 가장자리 테두리는 또렷하지 않게 나온 결과
 ```
 Illustration, vertical 2:3.
 Art style: high-quality anime illustration, clean confident lineart, two-tone cel shading, natural adult proportions.
