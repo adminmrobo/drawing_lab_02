@@ -7,6 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from content_a import P1, P2, P3
 from content_b import P4, P5, P6
 from content_make import MAKE
+from content_ex import EX
 from make_requests import PROMPTS, CONV_OF, ATTACH_OF
 STYLES = [("pixel", "픽셀"), ("anime", "애니풍"), ("semireal", "반실사"), ("photo", "실사풍")]
 
@@ -352,12 +353,37 @@ def make_section(P):
 {bpart}<h4>결과에서 확인할 것</h4><ol>{chk}</ol>{tip}</div>"""
     return out + "</div></section>"
 
+def ex_section(P):
+    xs = EX.get(P["no"])
+    if not xs:
+        return ""
+    out = f"""<section class="room" id="ex"><div class="wrap"><div class="roomno">{P['no']}부 · 연습 문제</div><h2>프롬프트 연습 문제 — 직접 써 보고 만들어 보기</h2>
+<div class="box"><p>위의 '직접 만들어 보기'가 이 페이지 그림을 다시 만드는 실습이었다면, 연습 문제는 <b>새 장면</b>을 받아 이 부의 원리를 문장으로 옮겨 보는 연습입니다. 문제마다 상황 → 순서별 설명 → 연습 프롬프트 → 예상 결과 → 확인표 → 자주 나오는 실수 순서로 봅니다.</p>
+<ol style="margin:6px 0 0;padding-left:20px"><li>상황을 읽고, 프롬프트를 보기 전에 어떤 원리 문장이 필요할지 먼저 적어 봅니다.</li><li>순서별 설명을 따라 연습 프롬프트와 내 문장을 비교합니다.</li><li>참고 그림을 올리고 프롬프트를 넣어 만든 뒤, 예상 결과·확인표와 견줘 봅니다.</li><li>어긋난 곳은 '자주 나오는 실수'의 고치는 문장을 덧붙여 다시 만듭니다.</li></ol>
+<p class="hint" style="margin-top:8px">예상 결과 그림은 아래 연습 프롬프트로 Genspark에서 만든 예시입니다. 같은 프롬프트라도 결과는 매번 조금씩 다릅니다.</p></div>"""
+    for i, x in enumerate(xs, 1):
+        it = PROMPTS[x["key"]]
+        ar = "16/9" if "16:9" in it[4].split("\n")[0] else "2/3"
+        att = ATTACH_OF[CONV_OF[x["key"]]]
+        how = "".join(f"<li><b>{E(a)}</b> — {E(b)}</li>" for a, b in x["how"])
+        chk = "".join(f'<li>{E(c)}' + (f' <a href="{l}">원리 보기</a>' if l else "") + "</li>" for c, l in x["expect"])
+        mis = "".join(f"<tr><td>{E(a)}</td><td><code>{E(b)}</code></td></tr>" for a, b in x["mistakes"])
+        out += f"""<div class="failcard" id="ex{i}"><h3>연습 {i} · {E(x['title'])} <span class="chip">{E(x['level'])}</span></h3>
+<p><b>배우는 원리</b> — {E(x['goal'])}</p><div class="box"><b>상황</b> — {E(x['situ'])}</div>
+<h4>순서별 설명</h4><ol>{how}</ol>
+<div class="pair"><div class="promptbox"><b>연습 프롬프트(예상 결과 그림을 만든 문장 그대로)</b><p class="hint">첨부: {E(att)}</p><pre>{E(it[4])}</pre><button type="button" class="btn copy">복사하기</button></div>
+<div>{art(x['key'], it[3], ar, "예상 결과 — 위 연습 프롬프트로 만든 예시")}</div></div>
+<h4>결과에서 확인할 것</h4><ol>{chk}</ol>
+<h4>자주 나오는 실수와 덧붙일 문장</h4><div class="tbl"><table><thead><tr><th>결과에서 보이는 증상</th><th>덧붙이거나 바꿀 문장</th></tr></thead><tbody>{mis}</tbody></table></div>
+<p class="hint"><b>바꿔 해 보기</b> — {E(x['extend'])}</p></div>"""
+    return out + "</div></section>"
+
 def build_part(P):
     t = f"{SERIES} {P['no']}부 — {P['title']}"
     s = head(t, P["desc"], P["og"], P["file"])
     navl = [(f"#{x['id']}", f"{k+1}단계") for k, x in enumerate(P["steps"])]
     if P.get("fails"): navl += [("#fails", "실패 8종")]
-    navl += [("#make", "직접 만들기"), ("#judge", "평가"), ("#sum", "정리"), (P["next"][0], "다음 →")]
+    navl += [("#make", "직접 만들기"), ("#ex", "연습 문제"), ("#judge", "평가"), ("#sum", "정리"), (P["next"][0], "다음 →")]
     s += nav(navl)
     s += cover(P["cover_key"], P["cover_cap"], P["cover_cast"])
     s += f"""<header class="hero"><div class="wrap"><span class="kicker">{E(P['kicker'])}</span><h1>{E(P['title'])}</h1><p class="lead">{E(P['lead'])}</p>
@@ -373,6 +399,7 @@ def build_part(P):
         d = P["drift"]
         s += f'<div class="failcard" id="drift"><h3>{E(d["title"])}</h3>' + "".join(f"<p>{E(x)}</p>" for x in d["body"]) + '<p><span class="chip">연결된 원리</span><a href="05_ai_vfx.html#s1">5부 1단계 머리 문장</a></p></div></div></section>'
     s += make_section(P)
+    s += ex_section(P)
     s += judge(P["judge"]) + summary(P) + outro(P)
     s += kg_block(P["file"].replace(".html", ""), [P["file"]])
     s += footer()

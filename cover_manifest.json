@@ -102,7 +102,8 @@
     "make_requests": "docs/image_requests_make (11장)",
     "received": 48,
     "missing": [],
-    "note": "원본 해상도 유지(1920×1080·1024×1536), 표지 무손실 WebP"
+    "note": "원본 해상도 유지(1920×1080·1024×1536), 표지 무손실 WebP",
+    "ex_requests": "docs/image_requests_ex (12장, 그림 준비 중)"
   },
   "version": "v1.0",
   "date": "2026-11-24"

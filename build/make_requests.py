@@ -169,9 +169,62 @@ CONV = [("C01_covers_A", "표지 A (픽셀아트, 16:9)", "16:9", "refs 전부",
         ("C09_fail", "6부 실패 8종", "2:3·16:9", "해당 캐릭터의 refs/*_anime_base.png (박사는 refs/doctor_sheet.png)", C9)]
 HEAD_PIX = "웹페이지 맨 위에 거는 표지 그림을 한 장씩 차례로 만들어 줘.\n- 비율 16:9, 가로 1920px 이상\n- 그림체는 반드시 16비트 RPG풍 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)\n- 첨부한 참고 이미지의 캐릭터를 같은 외형으로 그릴 것(가발을 쓴 인물은 얼굴·눈 색·옷을 그대로)\n- 그림 안에 글자·숫자·로고 금지\n- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게\n아래 영어 프롬프트를 하나씩 써 줘."
 HEAD_ANI = "해설 페이지 본문에 넣을 그림을 한 장씩 차례로 만들어 줘.\n- 비율은 각 프롬프트 첫 줄을 따를 것(16:9는 가로 1920px 이상, 2:3은 세로 1536px 이상)\n- 첨부한 참고 이미지의 캐릭터 얼굴·눈 색·옷을 똑같이 지킬 것. 이번 편은 '가발로 변장'이라 머리 모양만 프롬프트대로 바꿈\n- 등장인물은 모두 20대 성인(박사는 성인 남성). 노출·과장된 체형·교복 느낌 금지\n- 그림 안에 글자·숫자·로고·말풍선 금지, 유명 애니 캐릭터와 닮으면 다시 만들 것\n아래 영어 프롬프트를 하나씩 써 줘."
-PROMPTS = {it[0]: it for _c in CONV for it in _c[4]}
-CONV_OF = {it[0]: _c[0] for _c in CONV for it in _c[4]}
-ATTACH_OF = {_c[0]: _c[3] for _c in CONV}
+
+# ---- 부마다 '프롬프트 연습 문제' 2개의 예상 결과 그림 (docs/image_requests_ex, make_requests_ex.py)
+X1 = [
+ body("ex1_1_moa_side_part", "01_hair_frame.html", "1부 연습 1", "모아가 옆 가르마 단발 가발을 쓴 상반신 — 가르마가 이마 선 뒤에서 시작해 앞머리 사이로 숨고, 머리 원형보다 한 겹 바깥에 부피가 있는 예상 결과", "2:3",
+   "Upper body, front three-quarter view of " + wig("moa", "a chin-length ash-brown bob wig with a side parting on her right side") + ".\nThe parting starts clearly BEHIND the hairline and disappears among the side-swept bangs; no parting line on the forehead.\nNatural volume: the bob sits slightly away from the scalp with a rounded crown; the ends curl softly inward.",
+   "Light from the upper left."),
+ body("ex1_2_sia_two_impressions", "01_hair_frame.html", "1부 연습 2", "같은 어깨 길이 가발을 쓴 시아 두 모습 — 왼쪽은 끝이 바깥으로 튀어 활발해 보이고, 오른쪽은 끝이 안으로 말려 차분해 보이는 예상 결과", "16:9",
+   "Two panels side by side, upper body, same pose, same lighting.\nLeft: " + wig("sia", "a shoulder-length dark brown wig with the ends flipped OUTWARD") + ", a bright lively smile.\nRight: the same Sia with exactly the same wig length, but the ends curled INWARD, a calm gentle smile.\nOnly the end direction and the expression differ; the length, color, parting and bangs are identical.",
+   "Light from the upper left in both panels."),
+]
+X2 = [
+ body("ex2_1_sia_half_up", "02_hair_bundles.html", "2부 연습 1", "반묶음 가발을 쓴 시아의 뒤쪽 3/4 모습 — 윗머리 다발이 뒤통수의 묶은 점으로 모이고, 아랫머리는 등 위로 풀려 내려오는 예상 결과", "2:3",
+   "Back three-quarter view, upper body of " + wig("sia", "a long straight dark chestnut half-up wig") + ", looking back over her shoulder.\nThe upper half of the hair is pulled back from the hairline and both temples toward one small tie at the back of the head, with visible tension lines converging at the tie; a short tail spreads out below the tie.\nThe lower half of the hair falls loosely down her back as soft ribbon-like locks.",
+   "Light from the upper left."),
+ body("ex2_2_haru_braid_shoulder", "02_hair_bundles.html", "2부 연습 2", "하루가 한 갈래로 땋은 갈색 가발을 오른쪽 어깨 앞으로 넘긴 상반신 — 땋은 머리가 어깨에 닿는 곳에서 꺾여 가슴 위로 내려오고, 매듭이 아래로 갈수록 작아지는 예상 결과", "2:3",
+   "Upper body, front view of " + wig("haru", "a long light-brown wig in one loose three-strand braid") + ".\nThe braid is brought over the front of her RIGHT shoulder: it rests on the shoulder, bends along it, and falls over her chest. The braid is made of soft diamond-shaped sections that get gradually smaller toward the end, finished with a small plain hair tie.\nThe rest of the hair behind the shoulders is partly hidden by the shoulders.",
+   "Light from the upper left."),
+]
+X3 = [
+ body("ex3_1_manga_three_tones", "03_hair_color.html", "3부 연습 1", "흑백 만화 한 장면에 하루(진한 회색 톤)·시아(검게 칠하고 흰 윤기 띠)·모아(선만, 그늘에만 옅은 톤)가 나란히 서서 머리색이 밝기로 구별되는 예상 결과", "16:9",
+   "Black-and-white manga illustration with ink lines and screentones only (no color), three adults standing side by side, upper body.\nLeft: " + wig("haru", "a shoulder-length red wig drawn with a dark gray screentone") + ".\nCenter: " + who("sia") + ", her own long black hair filled solid black with white glossy highlight bands about 15 percent of the hair area.\nRight: " + wig("moa", "a long wavy blonde wig left almost white, drawn with outlines and flow lines only and a light screentone only in the shadows") + ".\nThe three hair colors are clearly different in brightness.",
+   ""),
+ body("ex3_2_moa_backlight_silver", "03_hair_color.html", "3부 연습 2", "은발 가발을 쓴 모아가 뒤쪽 위에서 오는 빛을 받아, 정수리 가까이에 머리 둘레를 감는 윤기 띠와 머리 가장자리의 밝은 테두리가 생긴 예상 결과", "2:3",
+   "Upper body of " + wig("moa", "a long straight silver wig") + ", standing by a bright window.\nThe light comes from BEHIND and ABOVE her. A single glossy highlight band wraps around the head across the hair flow, placed high near the crown, broken slightly at each lock; a thin bright rim of light outlines the edge of the hair and shoulders; her face is in soft shade.",
+   ""),
+]
+X4 = [
+ body("ex4_1_sia_jump_down", "04_hair_motion.html", "4부 연습 1", "낮은 계단에서 뛰어내리는 순간의 시아 — 아래에서 올라오는 바람에 긴 머리가 위로 들려 퍼지고, 털끝일수록 크게 들린 예상 결과", "2:3",
+   "Full body of " + wig("sia", "a waist-length straight dark brown wig") + ", captured in mid-air while hopping down from a low step in the lab, knees slightly bent, arms out for balance, calm and safe.\nThe air from below lifts her hair upward and outward: the roots stay close to the head while the tips rise the most and spread in all directions; the hem of her apron also lifts slightly.",
+   "Light from the upper left."),
+ body("ex4_2_haru_pony_turn", "04_hair_motion.html", "4부 연습 2", "포니테일 가발을 쓴 하루가 고개를 휙 돌려 뒤를 보는 순간 — 머리는 이미 돌았는데 포니테일 끝은 늦게 따라와 반대쪽으로 휘어 말린 예상 결과", "16:9",
+   "Upper body of " + wig("haru", "a high light-brown ponytail wig tied with a plain lavender hair tie") + ", quickly turning her head to look back over her left shoulder.\nHer head has already turned, but the ponytail lags behind: the part near the tie follows the head, while the tail swings out to the opposite side and its tip curls outward. A few faint motion lines behind the tail.",
+   "Light from the upper left."),
+]
+X5 = [
+ body("ex5_1_sia_silver_inpaint", "05_ai_vfx.html", "5부 연습 1", "왼쪽은 원래 흑발의 시아, 오른쪽은 머리 부분만 다시 그려 은발이 된 시아 — 얼굴·회색 눈·귀걸이·옷·자세가 그대로인 예상 결과", "16:9",
+   "Two panels side by side, identical upper-body pose and lighting.\nLeft: " + who("sia") + ".\nRight: exactly the same image, but only the hair color is changed to silver, as if repainted with inpainting: same hair length, same locks and same parting; her face, gray eyes, small silver earrings, expression, outfit and background are pixel-for-pixel the same.",
+   "Light from the upper left in both panels."),
+ body("ex5_2_three_low_ponytails", "05_ai_vfx.html", "5부 연습 2", "하루·시아·모아가 같은 '목덜미 낮은 포니테일' 가발 문장으로 나란히 선 단체 그림 — 머리 모양은 같고 얼굴·눈 색·옷·모아의 왼쪽 리본은 각자 그대로인 예상 결과", "16:9",
+   "Group picture, three adults standing side by side, upper body, front view, all wearing the same style of wig: a low ponytail tied at the nape, shoulder-length tail, side-swept bangs, natural volume, soft ribbon-like locks.\nLeft: " + FACE["haru"] + " with a light-brown version of this wig, wearing " + OUT["haru"] + ".\nCenter: " + FACE["sia"] + " with a dark chestnut version, wearing " + OUT["sia"] + ".\nRight: " + FACE["moa"] + " with an ash-beige version, the white frilled maid headband and the white ribbon over her LEFT ear on top of the wig, wearing " + OUT["moa"] + ".\nEach keeps her own face and eye color.",
+   "Light from the upper left."),
+]
+X6 = [
+ body("ex6_1_wind_fixed", "06_failure_lab.html", "6부 연습 1", "실패 f6을 고친 예상 결과 — 왼쪽에서 부는 바람 하나에 하루의 앞머리·옆머리·뒷머리·랩코트가 모두 오른쪽으로 날리는 그림", "16:9",
+   "Full body of " + wig("haru", W_LONG) + ", standing in a strong wind blowing from the LEFT.\nEvery lock, including the bangs, the side locks in front of the ears and the long back hair, blows to the RIGHT; the roots stay close to the head and the tips move the most. Her lab coat also flutters to the right. There is only one wind direction in the whole picture.",
+   "Light from the upper left."),
+ body("ex6_2_moa_low_twin_adult", "06_failure_lab.html", "6부 연습 2", "머리 이름 대신 모양을 적어 고친 예상 결과 — 목덜미 낮은 위치에서 두 갈래로 묶은 어깨 길이 가발을 쓴 모아가 20대 성인 비율로 차분하게 보이는 그림", "2:3",
+   "Upper body of " + wig("moa", "an ash-beige wig tied into two low ponytails at the nape, just behind the ears, each tail shoulder-length and loosely wavy, plain dark hair ties") + ".\nAn adult woman in her early twenties with adult proportions and a calm, mature expression; the hairstyle reads as relaxed and grown-up, not childish.",
+   "Light from the upper left."),
+]
+CONV_EX = [("E01_ex_part1_2", "연습 문제 예상 결과 1·2부", "2:3·16:9", "refs/moa_anime_base.png, refs/sia_anime_base.png, refs/haru_anime_base.png", X1 + X2),
+           ("E02_ex_part3_4", "연습 문제 예상 결과 3·4부", "16:9·2:3", "refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", X3 + X4),
+           ("E03_ex_part5_6", "연습 문제 예상 결과 5·6부", "16:9·2:3", "refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", X5 + X6)]
+PROMPTS = {it[0]: it for _c in CONV + CONV_EX for it in _c[4]}
+CONV_OF = {it[0]: _c[0] for _c in CONV + CONV_EX for it in _c[4]}
+ATTACH_OF = {_c[0]: _c[3] for _c in CONV + CONV_EX}
 if __name__ == "__main__":
     os.makedirs(os.path.join(D, "prompts"), exist_ok=True)
     rows = []; n = 0
