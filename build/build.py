@@ -379,6 +379,10 @@ def ex_section(P):
                 if r2:
                     p2 = PROMPTS[r2]; ar2 = "2/3" if "vertical 2:3" in p2[4] else "16/9"
                     retry += f'<h4>2차 다시 시도</h4><p><b>고치는 방법</b> — {E(how3)}</p><div class="pair"><div class="promptbox"><b>2차 다시 시도 프롬프트</b><p class="hint">첨부: {E(ATTACH_OF[CONV_OF[r2]])}</p><pre>{E(p2[4])}</pre><button type="button" class="btn copy">복사하기</button></div><div>{art(r2, p2[3], ar2, "2차 다시 시도 결과")}</div></div>'
+                    r2r = x.get("retry2_res")
+                    if r2r:
+                        c2 = {"성공": "var(--green)", "부분 성공": "var(--orange)", "실패": "var(--red)"}[r2r[0]]
+                        retry += f'<p style="border-left:4px solid {c2};padding:8px 12px;background:#f7f9fb;border-radius:6px"><b style="color:{c2}">{r2r[0]}</b> — {E(r2r[1])}</p>'
         res = f'<p style="background:#fff7ec;border-left:4px solid var(--orange);padding:8px 12px;border-radius:6px">{E(x["res"])}</p>' if x.get("res") else ""
         out += f"""<div class="failcard" id="ex{i}"><h3>연습 {i} · {E(x['title'])} <span class="chip">{E(x['level'])}</span></h3>
 <p><b>배우는 원리</b> — {E(x['goal'])}</p><div class="box"><b>상황</b> — {E(x['situ'])}</div>
