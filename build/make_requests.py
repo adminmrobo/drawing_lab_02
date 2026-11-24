@@ -222,9 +222,31 @@ X6 = [
 CONV_EX = [("E01_ex_part1_2", "연습 문제 예상 결과 1·2부", "2:3·16:9", "refs/moa_anime_base.png, refs/sia_anime_base.png, refs/haru_anime_base.png", X1 + X2),
            ("E02_ex_part3_4", "연습 문제 예상 결과 3·4부", "16:9·2:3", "refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", X3 + X4),
            ("E03_ex_part5_6", "연습 문제 예상 결과 5·6부", "16:9·2:3", "refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", X5 + X6)]
-PROMPTS = {it[0]: it for _c in CONV + CONV_EX for it in _c[4]}
-CONV_OF = {it[0]: _c[0] for _c in CONV + CONV_EX for it in _c[4]}
-ATTACH_OF = {_c[0]: _c[3] for _c in CONV + CONV_EX}
+
+# ---- 연습 문제 다시 시도(1차 결과가 의도와 다르게 나온 6장) — docs/image_requests_ex_retry, make_requests_retry.py
+FIXONLY = "Keep everything else exactly the same: faces, eye colors, accessories, outfits, pose, framing and background. Still no text, no letters, no logos."
+def edit(file, part, alt, base, change):
+    p = f"[Attach the failed result {base}.png first]\nSame image as the attached one. {change}\n{FIXONLY}"
+    return (file, "", part, alt, p, "anime")
+XR = [
+ edit("ex1_2_sia_two_impressions_retry", "1부 연습 2 다시 시도", "같은 어깨 길이 가발의 시아 두 모습 — 왼쪽은 끝이 바깥으로 크게 튀고, 오른쪽은 턱 아래로 안으로 말려 실루엣 차이가 뚜렷한 결과", "ex1_2_sia_two_impressions",
+   "Change only the hair ends, and make the difference strong and obvious.\nLeft panel: the ends flip OUTWARD sharply at shoulder height, curling up and away from the neck by about a hand's width — a lively, bouncy silhouette.\nRight panel: the ends curl INWARD under the jaw, hugging the neck — a smooth, rounded, calm silhouette.\nBoth wigs stay exactly the same length (touching the shoulders) and the same dark brown color, a little warmer and lighter than black; same bangs and parting."),
+ edit("ex2_1_sia_half_up_retry", "2부 연습 1 다시 시도", "반묶음 가발의 시아 뒤쪽 3/4 모습 — 이마와 관자놀이에서 뒤통수 묶은 점까지 당김 선이 또렷하고, 묶은 점 아래 짧은 꼬리가 퍼지는 결과", "ex2_1_sia_half_up",
+   "Change only the upper half of the hair: pull it back more tightly so that six to eight clear tension lines run from the hairline and both temples straight to ONE small dark hair tie at the back of the head.\nBelow the tie, a short tail about a hand's length spreads out over the loose hair.\nThe lower half of the hair stays loose down her back as soft ribbon-like locks."),
+ edit("ex2_2_haru_braid_shoulder_retry", "2부 연습 2 다시 시도", "하루의 땋은 가발이 오른쪽 어깨(그림 왼쪽) 위에 얹혀 어깨를 따라 꺾인 뒤 가슴 위로 내려오는 결과", "ex2_2_haru_braid_shoulder",
+   "Move the braid to her RIGHT shoulder, which is on the LEFT side of the picture (the viewer's left). Do not mirror the whole image; her face and outfit stay as they are.\nThe braid rests ON TOP of the shoulder seam of the lab coat, bends clearly along the curve of the shoulder, then falls over the left side of the picture onto her chest.\nThe right side of the picture shows no braid. The braid stays light brown, made of soft diamond-shaped sections that get smaller toward the end; no pink hair, no navy streaks, no buns visible."),
+ body("ex3_2_moa_backlight_silver_retry", "03_hair_color.html", "3부 연습 2 다시 시도", "은발 가발의 모아가 바로 뒤의 밝은 창에서 빛을 받아, 얼굴은 그늘지고 머리 가장자리에 밝은 테두리, 정수리 가까이 높은 윤기 띠가 생긴 결과", "2:3",
+   "Strong BACKLIGHT scene. Upper body of " + wig("moa", "a long straight silver wig") + ", standing with her back to a large bright window; the window glows white directly BEHIND her head and slightly above.\nHer face and the front of her body are in soft cool shadow, clearly darker than the glowing background.\nA bright thin rim light outlines the top and both edges of her silver hair and the tops of her shoulders.\nA single glossy highlight band wraps around the head HIGH near the crown, across the hair flow, broken slightly at each lock.\nNo light source in front of her.",
+   "Do not light her face from the front."),
+ edit("ex5_2_three_low_ponytails_retry", "5부 연습 2 다시 시도", "단체 그림에서 하루(왼쪽)의 머리만 밝은 갈색 낮은 포니테일 가발로 바뀌고, 시아·모아는 그대로인 결과", "ex5_2_three_low_ponytails",
+   "Change only the hair of the person on the LEFT (Haru): her pink hair and navy streaks are completely covered by a light-brown wig — a low ponytail tied at the nape, shoulder-length tail, side-swept bangs, the same shape as the other two women's hair.\nNo pink hair, no navy streaks, no buns visible anywhere on her. Keep her face, big bright blue eyes, lavender hoodie and lab coat.\nThe center and right women stay exactly as they are."),
+ edit("ex6_1_wind_fixed_retry", "6부 연습 1 다시 시도", "왼쪽에서 부는 바람에 하루의 앞머리와 얼굴 옆 머리까지 오른쪽으로 날려 이마가 조금 드러나고, 뒷머리·랩코트와 같은 방향인 결과", "ex6_1_wind_fixed",
+   "Change only the bangs and the side locks in front of the ears: the strong wind from the LEFT blows them sideways to the RIGHT, lifting the bangs off the forehead so part of her forehead shows, and the side locks stream to the right past her cheek.\nThe long back hair and the lab coat keep blowing to the right as before, so the whole picture has one wind direction."),
+]
+CONV_RETRY = [("R01_ex_retry", "연습 문제 다시 시도 6장", "16:9·2:3", "각 프롬프트의 1차 결과 그림(failed/) + refs/haru_anime_base.png, refs/sia_anime_base.png, refs/moa_anime_base.png", XR)]
+PROMPTS = {it[0]: it for _c in CONV + CONV_EX + CONV_RETRY for it in _c[4]}
+CONV_OF = {it[0]: _c[0] for _c in CONV + CONV_EX + CONV_RETRY for it in _c[4]}
+ATTACH_OF = {_c[0]: _c[3] for _c in CONV + CONV_EX + CONV_RETRY}
 if __name__ == "__main__":
     os.makedirs(os.path.join(D, "prompts"), exist_ok=True)
     rows = []; n = 0

@@ -1,0 +1,8 @@
+order,conversation,file,what,ratio,status
+1,R01_ex_retry,ex1_2_sia_two_impressions_retry,1부 연습 2 다시 시도,1차 결과와 같게,
+2,R01_ex_retry,ex2_1_sia_half_up_retry,2부 연습 1 다시 시도,1차 결과와 같게,
+3,R01_ex_retry,ex2_2_haru_braid_shoulder_retry,2부 연습 2 다시 시도,1차 결과와 같게,
+4,R01_ex_retry,ex3_2_moa_backlight_silver_retry,3부 연습 2 다시 시도,2:3,
+5,R01_ex_retry,ex5_2_three_low_ponytails_retry,5부 연습 2 다시 시도,1차 결과와 같게,
+6,R01_ex_retry,ex6_1_wind_fixed_retry,6부 연습 1 다시 시도,1차 결과와 같게,
+7,R01_ex_retry,ex5_1_sia_silver_inpaint,5부 연습 1(지난번에 받지 못한 그림),16:9,
